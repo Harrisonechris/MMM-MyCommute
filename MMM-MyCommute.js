@@ -238,6 +238,7 @@ Module.register("MMM-MyCommute", {
 			if ("location" in calendarEvent &&
 					calendarEvent.location !== undefined &&
 					calendarEvent.location !== false &&
+			    		calendarEvent.startDate >= Date.now() &&
 					calendarEvent.startDate < (Date.now() + this.config.maxCalendarTime)
 			) {
 				this.appointmentDestinations.push.apply(this.appointmentDestinations,
